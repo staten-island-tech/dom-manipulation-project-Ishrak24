@@ -1,30 +1,65 @@
-/*const DOMSelectors = {
+const DOMSelectors = {
   button: document.getElementById("btn"),
-  text: document.querySelector("#text"),
-  box: document.getElementById("big-black-box"),
-  points: document.querySelectorAll(".point"),
+  input: document.querySelector("#input"),
+  box: document.getElementById("container-box"),
 };
 
-function backgoundAndText(backgound, text) {
-  backgound.style.backgroundColor = "red";
-  text.textContent = "This is now a bigger red box";
-  text.style.fontSize = "40px";
-}
-
 DOMSelectors.button.addEventListener("click", function () {
-  backgoundAndText(DOMSelectors.box, DOMSelectors.text);
-});
+  const year = parseInt(document.getElementById("input").value);
+  const age = 2022 - year;
 
-DOMSelectors.button.addEventListener("click", function () {
-  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+  if (year > 0 && year < 2) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text">  Bulbasaur / Charmander / Squirtle  </p> 
+  `
+    );
+  } else if (year >= 2 && year < 3) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text"> Chikorita / Cyndaquil / Totodile </p> 
+  `
+    );
+  } else if (year >= 3 && year < 4) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text"> Treecko / Torchic / Mudkip</p> 
+  `
+    );
+  } else if (year >= 4 && year < 5) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text"> Turtwig / Chimchar / Piplup </p> 
+  `
+    );
+  } else if (year >= 5 && year < 6) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text"> Snivy / Tepig / Oshawott  </p> 
+  `
+    );
+  } else if (year >= 6 && year < 7) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text"> Chespin / Fennekin / Froakie  </p> 
+  `
+    );
+  } else if (year >= 7 && year < 8) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text">  Rowlet / Litten / Popplio </p> 
+  `
+    );
+  } else if (year >= 8 && year < 9) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text">  Grookey / Scorbunny / Sobble </p> 
+  `
+    );
+  }
+  DOMSelectors.input.value = ``;
 });
-
-function changeLi() {
-  let pointIndex = 2;
-  DOMSelectors.points.forEach((point) => {
-    point.addEventListener("click", function () {
-      point.textContent = `Hello I am point ${pointIndex}`;
-      pointIndex++;
-    });
-  });
-}*/
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
