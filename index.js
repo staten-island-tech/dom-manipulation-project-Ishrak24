@@ -5,52 +5,51 @@ const DOMSelectors = {
 };
 
 DOMSelectors.button.addEventListener("click", function () {
-  const year = parseInt(document.getElementById("input").value);
-  const age = 2022 - year;
+  const gen = parseInt(document.getElementById("input").value);
 
-  if (year > 0 && year < 2) {
+  if (gen > 0 && gen < 2) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text">  Bulbasaur / Charmander / Squirtle  </p> 
   `
     );
-  } else if (year >= 2 && year < 3) {
+  } else if (gen >= 2 && gen < 3) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text"> Chikorita / Cyndaquil / Totodile </p> 
   `
     );
-  } else if (year >= 3 && year < 4) {
+  } else if (gen >= 3 && gen < 4) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text"> Treecko / Torchic / Mudkip</p> 
   `
     );
-  } else if (year >= 4 && year < 5) {
+  } else if (gen >= 4 && gen < 5) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text"> Turtwig / Chimchar / Piplup </p> 
   `
     );
-  } else if (year >= 5 && year < 6) {
+  } else if (gen >= 5 && gen < 6) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text"> Snivy / Tepig / Oshawott  </p> 
   `
     );
-  } else if (year >= 6 && year < 7) {
+  } else if (gen >= 6 && gen < 7) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text"> Chespin / Fennekin / Froakie  </p> 
   `
     );
-  } else if (year >= 7 && year < 8) {
+  } else if (gen >= 7 && gen < 8) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text">  Rowlet / Litten / Popplio </p> 
   `
     );
-  } else if (year >= 8 && year < 9) {
+  } else if (gen >= 8 && gen < 9) {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       `<p id="text">  Grookey / Scorbunny / Sobble </p> 
@@ -59,6 +58,7 @@ DOMSelectors.button.addEventListener("click", function () {
   }
   DOMSelectors.input.value = ``;
 });
+
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
   document.location.reload();
