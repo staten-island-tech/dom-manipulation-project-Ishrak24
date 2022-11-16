@@ -55,6 +55,18 @@ DOMSelectors.button.addEventListener("click", function () {
       `<p id="text">  Grookey / Scorbunny / Sobble </p> 
   `
     );
+  } else if (gen >= 9 && gen < 10) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text">  Sprigatito / Fuecoco / Quaxly </p> 
+  `
+    );
+  } else if (gen > 9) {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<p id="text">  I'm not a time traveller I don't know </p> 
+  `
+    );
   }
   DOMSelectors.input.value = ``;
 });
