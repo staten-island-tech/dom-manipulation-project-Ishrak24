@@ -86,3 +86,10 @@ const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
   document.location.reload();
 });
+
+let buttons = document.querySelectorAll(".remove");
+buttons.forEach((button) =>
+  button.addEventListener("click", function (event) {
+    event.target.remove();
+  })
+);
